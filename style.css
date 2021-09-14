@@ -38,7 +38,7 @@ body section.text h1 .b {
 
 body section.text h1 .c {
   color: #fff;
-  font-size: 200px;
+  font-size: 150px;
   font-family: 'Playfair Display', serif;
   font-weight: lighter;
   display: block;
@@ -49,8 +49,8 @@ body section.text h1 .d {
   color: #fff;
   font-size: 70px;
   font-weight: lighter;
-  -webkit-transform: translate(10px, 130px);
-          transform: translate(10px, 130px);
+  -webkit-transform: translate(10px, 80px);
+          transform: translate(10px, 80px);
 }
 
 body section.text h1 .e {
@@ -69,12 +69,12 @@ body section.text .aa {
 body section.text .bb {
   height: 50px;
   padding: 10px;
-  -webkit-transform: translate(140px, 140px);
-          transform: translate(140px, 140px);
+  -webkit-transform: translate(100px, 110px);
+          transform: translate(100px, 110px);
 }
 
 body section.text .cc {
-  height: 300px;
+  height: 200px;
   padding: 10px;
 }
 
@@ -123,6 +123,35 @@ body div.hamburgermenu:hover {
 
 body div.hamburgermenu:hover span {
   background: #fff;
+}
+
+body section.overlaynav {
+  height: 100vh;
+  width: 100%;
+  background: #C6A7A4;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 210;
+  top: -100vh;
+  -webkit-transition: top .3s ease;
+  transition: top .3s ease;
+}
+
+body section.overlaynav .closebtn {
+  background: #111;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-family: 'Karantina', cursive;
+  color: #ccc;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+body section.overlaynav.visible {
+  top: 0px;
 }
 
 .student {

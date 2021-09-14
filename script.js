@@ -94,3 +94,15 @@ document.addEventListener('mousemove',function(event){
     m.movementEngine(event)
 });
 m.drawClassic();
+
+
+
+//variables
+let overlayVisible = false;
+//My funxciotns
+function toggleOverlay() {
+    // if(overlayVisible){
+        //hideit.
+    document.querySelector('.overlaynav').classList.toggle('visible')
+    // }
+}

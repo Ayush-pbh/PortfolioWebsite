@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Playball&family=Playfair+Display&family=Ultra&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karantina:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="text">
@@ -30,11 +31,18 @@
         </h1>
         
     </section>
-    <div class="hamburgermenu">
+    <div class="hamburgermenu" onclick='toggleOverlay()'>
         <span></span>
         <span></span>
         <span></span>
     </div>
+
+    <section class='overlaynav'>
+        <div class="closebtn" onclick='toggleOverlay()'>
+            <span>Close</span>
+        </div>
+    </section>
+
     <script src="./libs/final.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script.js"></script>

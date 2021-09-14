@@ -6,6 +6,7 @@
     left:0px;
     pointer-events: none;
     transition: opacity .7s ease;
+    z-index:220;
 }
 
 .mj-dmaj-def{
@@ -18,11 +19,13 @@
 }
 
 .mj-dmin-def{
+    display:none;
     height: 10px;
     width: 10px;
     border-radius: 50%;
     background:#ccc;
-    transition: transform .3s ease-out, opacity .7s ease;
+    transition:  opacity .7s ease;
+    /* transform .3s ease-out, */
     /* border: 1px solid #111; */
 }
 .mj-img-def{

@@ -2,8 +2,133 @@ body{
     margin:0px;
     padding: 0px;
     background: #111;
-    h1{
-        color: #ccc;
-        margin: 20px;
+    overflow: hidden;
+    section.text{
+        width: 100%;
+        height: 100vh;
+        h1{
+            color: #ccc;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            width:100%;
+            .hidetextintro{
+                position: absolute;
+                z-index: 200;
+                // transform: translate(0px,150px);
+            }
+            .a{
+                font-size: 70px;
+                color: #818181; 
+                font-weight: lighter;
+            }
+            .b{
+                color: #818181;
+                font-size: 30px;   
+                font-family: 'Playball', cursive;
+                font-weight: lighter;
+            }
+            .c{
+                color: #fff;
+                font-size: 200px;
+                font-family: 'Playfair Display', serif;
+                font-weight: lighter;
+                display: block;
+            }
+            .d{
+                font-family: 'Cedarville Cursive', cursive;
+                color: #fff;
+                font-size: 70px;
+                font-weight: lighter;
+                transform: translate(10px,130px);
+            }
+            .e{
+                font-weight: lighter;
+                font-family: 'Ultra', serif;
+                bottom:10px;
+            }
+        }
+        .aa{
+            transform:translate(20px, 100px);
+            height: 100px;
+            // top: 10px;
+            // left: 10px;
+            padding: 10px;
+        }
+        .bb{
+            height: 50px;
+            padding: 10px;
+            transform: translate(140px, 140px);
+            // top: calc(50vh - 200px);
+            // left: 150px;
+        }
+        .cc{
+            height: 300px;
+            padding: 10px;
+            // top: calc(50vh - 266px);
+            // left: 20px;
+        }
+        .dd{
+            padding: 10px;
+            height: 150px;
+            transform: translate(30px,-20px);
+            // bottom: -240px;
+            // left: 20px;
+            .auto-write{
+                color: #fff;
+                font-size:50px;
+                // position: absolute;
+                // bottom: 30px;
+                // left: 30px;
+            }
+        }
     }
+    div.hamburgermenu{
+        height: 23px;
+        width: 45px;
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        
+        span{
+            transition: background .2s ease;
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background: #818181;
+            margin: 0px;
+            left:0px;
+            &:nth-child(2){
+                top:9px;
+            }
+            &:nth-child(3){
+                top:18px;
+            }
+        }
+        
+    }
+    div.hamburgermenu:hover{
+        span{
+            background: #fff;
+        }
+        cursor:pointer;
+    }
+}
+
+
+//custom classes....
+.student{
+    color:#C6A7A4 !important;
+    font-family: 'Abril Fatface', cursive !important;
+}
+.bibil{
+    color:#afc6a4 !important;
+    font-family: 'Great Vibes', cursive !important;
+}
+.developer{
+    color:#a6a4c6 !important;
+    font-family: 'Homemade Apple', cursive !important;
+}
+.abbr-autowrite{
+    text-decoration: none;
 }

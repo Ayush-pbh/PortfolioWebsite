@@ -5,7 +5,6 @@ tl
 .then(()=>initTyper());
 
 
-
 //for Auto typing
 var TxtRotate = function(el, toRotate, period) {
     this.toRotate = toRotate;

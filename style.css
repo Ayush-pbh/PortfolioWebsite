@@ -137,22 +137,86 @@ body .overlaynav {
   position: fixed;
   height: 100vh;
   width: 100%;
-  background: #000;
+  background: #111;
   top: -110vh;
   left: 0px;
   -webkit-transition: top .5s ease;
   transition: top .5s ease;
+  overflow: hidden;
+}
+body .overlaynav ul.links{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  /*top:  7vh;*/
+  left: 30px;
+}
+body .overlaynav ul.links li.disabled{
+  color: #3e3e3e;
+  cursor: not-allowed;
+}
+body .overlaynav ul.links li{
+  cursor: pointer;
+  margin-top: 10px;
+  list-style: none;
+  color: #ccc;
+  text-decoration: none;
+  font-size:  3em;
+  font-family: 'Poiret One', cursive;
+  transition: letter-spacing .2s ease, color .2s ease;
+}
+body .overlaynav ul.links li:hover{
+  letter-spacing: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+body .overlaynav ul.links li.disabled{
+  font-weight: lighter;
+  letter-spacing: 5px;
+}
+
+body .overlaynav ul.hindi-text{
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  right: 20px;
+  top: 0px;
+  padding-top: 100px;
+}
+body .overlaynav ul.hindi-text li{
+  width: 100%;
+  text-align: right;
+  color: #191919;
+  list-style: none;
+  font-size: 4em;
+}
+body .overlaynav ul.links li.tabbed{
+  margin-left: 150px;
 }
 
 body .overlaynav .closebtn {
-  height: 50px;
+  height: 40px;
   width: 50px;
   background: #ccc;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding-top: 5px;
+  cursor:  pointer;
+}
+body .overlaynav .closebtn span{
+  color: #111;
+  font-family: 'Rationale', sans-serif;
+  font-size: 25px;
 }
 
 body .overlaynav.visible {
   top: 0px;
 }
+
+
+
+
 
 .student {
   color: #C6A7A4 !important;

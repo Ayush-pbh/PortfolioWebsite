@@ -1,9 +1,11 @@
-tl = new TimelineMax({});
+// tl = new TimelineMax({});
 
-tl
-.staggerFrom('.hidetextintro', 1.5, {y:'200%', ease:Power4.easeOut}, 0.25)
-.then(()=>initTyper());
+// tl
+// .staggerFrom('.hidetextintro', 1.5, {opacity:0, ease:Power4.easeOut}, 0.25)
+// .staggerFrom('.hidetextintro', 1.5, {y:100, ease:Power4.easeOut}, 0.25)
+// .then(()=>initTyper());
 
+gsap.from('.hidetextintro',{opacity:0,y:50,duration:0.5,stagger:0.2}).then(()=>initTyper());
 
 //for Auto typing
 var TxtRotate = function(el, toRotate, period) {
@@ -100,8 +102,15 @@ m.drawClassic();
 let overlayVisible = false;
 //My funxciotns
 function toggleOverlay() {
-    // if(overlayVisible){
-        //hideit.
-    document.querySelector('.overlaynav').classList.toggle('visible')
-    // }
+    if(overlayVisible){
+        // hideit.
+        document.querySelector('.overlaynav').classList.remove('visible')
+        overlayVisible = false
+    }
+    else{
+        //show it.
+        overlayVisible = true;
+        document.querySelector('.overlaynav').classList.add('visible')
+        gsap.from('.anim1',{opacity:0,y:50,duration:0.4,stagger:0.2});
+    }
 }

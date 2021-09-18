@@ -164,6 +164,7 @@ body .overlaynav ul.links li{
   font-size:  3em;
   font-family: 'Poiret One', cursive;
   transition: letter-spacing .2s ease, color .2s ease;
+  width:  50%;
 }
 body .overlaynav ul.links li:hover{
   letter-spacing: 5px;
@@ -339,4 +340,3 @@ body .overlaynav.visible {
     transform: scale(1, 0);
   }
 }
-/*# sourceMappingURL=style.css.map */

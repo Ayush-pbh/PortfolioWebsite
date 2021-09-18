@@ -2,7 +2,7 @@
   padding: 0px;
   margin: 0px;
 }
-
+html{overflow: hidden;}
 body {
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ body {
 
 body .navbar {
   position: relative;
-  height: 7vh;
+  height: 50px;
   max-height: 70px;
   min-height: 40px;
   background: #111;
@@ -58,7 +58,7 @@ body .navbar .hamburgermenu span:nth-child(3) {
 }
 
 body .text {
-  padding-left: 10px;
+  /*padding-left: 10px;*/
   height: 93vh;
   width: 100%;
   position: relative;
@@ -67,6 +67,7 @@ body .text {
 }
 
 body .text .aa {
+  margin-left: 10px;
   height: 33%;
   width: 100%;
   position: relative;
@@ -83,6 +84,7 @@ body .text .aa .a {
 }
 
 body .text .bb {
+  margin-left: 10px;
   position: relative;
 }
 
@@ -95,6 +97,7 @@ body .text .bb .b {
 }
 
 body .text .cc {
+  margin-left: 10px;
   height: 33%;
   width: 100%;
   color: #fff;
@@ -118,6 +121,7 @@ body .text .cc .d {
 }
 
 body .text .dd {
+  margin-left: 10px;
   font-family: 'Ultra', serif;
   font-weight: lighter;
   position: relative;
@@ -149,7 +153,7 @@ body .overlaynav ul.links{
   width: 100%;
   position: absolute;
   /*top:  7vh;*/
-  left: 30px;
+  margin-left: 30px;
 }
 body .overlaynav ul.links li.disabled{
   color: #3e3e3e;
@@ -165,6 +169,9 @@ body .overlaynav ul.links li{
   font-family: 'Poiret One', cursive;
   transition: letter-spacing .2s ease, color .2s ease;
   width:  50%;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
 }
 body .overlaynav ul.links li:hover{
   letter-spacing: 5px;
@@ -220,10 +227,12 @@ body .pagechange{
   width:100%;
   position: fixed;
   top:0px;
-  left:-100%;
+  left:-200%;
   background:#C6A7A4;
   transform-origin: bottom;
 }
+
+
 
 
 
@@ -348,4 +357,33 @@ body .pagechange{
     -webkit-transform: scale(1, 0);
     transform: scale(1, 0);
   }
+}
+
+
+
+
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 492px) {
+  .mj-dmaj-def,.mj-dmin-def{
+    opacity: 0;
+  }
+  body .text .cc .c {
+    font-size: 6em;
+  }
+   body .text .aa .a {
+      font-size: 3em;
+   }
+   /*NAVPANE*/
+   body .overlaynav ul.links {
+    margin-top: 50px;
+    margin-left: 30px;
+   }
+   body .overlaynav ul.links li{
+    font-size: 2.5em;
+    width: 100%;
+   }
+   body .overlaynav ul.links li.tabbed{
+    margin-left: 0px;
+   }
 }

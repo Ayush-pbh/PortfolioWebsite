@@ -102,7 +102,7 @@ m.drawClassic();
 let overlayVisible = false;
 //My funxciotns
 function toggleOverlay() {
-  gsap.from('.pagechange',{left:'100%',duration:1,ease:Power4.easeOut})
+  gsap.from('.pagechange',{left:'100%',duration:2,ease:Power4.easeOut})
     if(overlayVisible){
         // hideit.
         document.querySelector('.overlaynav').classList.remove('visible')

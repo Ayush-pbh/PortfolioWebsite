@@ -148,7 +148,7 @@ window.onload = () => {
     // },1000)
     // },1000)
     // uncomment below on produntion.
-    gsap.to('.loadanim', {top:'-100%', duration:1, ease: 'sine'})
+    gsap.to('.loadanim', {top:'-120%', duration:1, ease: 'sine'})
     loadanim.kill()      
 }
 

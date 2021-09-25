@@ -141,15 +141,15 @@ let intoAmination = gsap.timeline()
 
 window.onload = () => {
     // gsap.to('.loadanim', {top:'-100%', duration:1, ease: 'sine'})
-    setTimeout(()=>{
-        gsap.to('.loadanim', {top:'-100%', duration:1, ease: 'expo'})
-        setTimeout(()=>{
-        loadanim.kill()      
-    },1000)
-    },1000)
+    // setTimeout(()=>{
+    //     gsap.to('.loadanim', {top:'-100%', duration:1, ease: 'expo'})
+    //     setTimeout(()=>{
+    //     loadanim.kill()      
+    // },1000)
+    // },1000)
     // uncomment below on produntion.
-    // gsap.to('.loadanim', {top:'-100%', duration:1, ease: 'sine'})
-    // loadanim.kill()      
+    gsap.to('.loadanim', {top:'-100%', duration:1, ease: 'sine'})
+    loadanim.kill()      
 }
 
 

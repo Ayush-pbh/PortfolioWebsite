@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Dummy | Ayush</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./dummy.css">
+	<link rel="stylesheet" type="text/css" href="./libs/mj.css">
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=El+Messiri&family=Playfair+Display&family=Poiret+One&family=Rationale&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="navbar">
+	    <span class="logo">A</span>
+	    <div class="hamburgermenu" onclick='toggleOverlay()'>
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	    </div>
+	</div>
+
+	<div class="hero">
+		<span class="hero-head reveal-anim">HeroHead <div class="reveal"></div></span>
+
+		<ul class="hero-links top-link">
+			<li class="reveal-anim">/link 1 <div class="reveal"></div></li>
+			<li class="reveal-anim">/link 1 <div class="reveal"></div></li>
+		</ul>
+		<div class="hero-content">
+			<div class="hero-holder flexy">
+				<img class="hero-image" src="./images/image2.jpg">
+				
+				<div class="hero-content-head">
+					Ugly Beauty
+				</div>
+				<div class="hero-subhead">
+					Painfull Bliss
+				</div>
+			</div>
+			<div class="hero-holder">
+				<!-- <img class="hero-image" src="./images/image2.jpg"> -->
+				<div class="hero-subhead">
+					Painfull Bliss
+				</div>
+				<div class="hero-text">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+			</div>
+			<div class="hero-holder">
+				<div class="hero-content-head reveal-anim">
+					Ugly Beauty
+					<div class="reveal"></div>
+				</div>
+			</div>
+			<div class="hero-holder">
+				<div class="hero-subhead">
+					Painfull Bliss
+				</div>
+			</div>
+			<!-- 
+				hero-content.
+					-> hero-holer
+						-> hero-image ==> .left .right .centre
+						-> hero-text  .left .right .centre
+						-> hero-head  .left .right .centre
+						-> hero-sebhead .left .right .centre
+			 -->
+		</div>	
+		<ul class="hero-links">
+			<li>/link 1</li>
+			<li>/link 2</li>
+			<hr class="bottom-line">
+		</ul>
+	</div>
+
+
+	<section class='overlaynav '>
+        <ul class="hindi-text">
+            <li>तपस</li>
+            <li>परिश्रम</li>
+            <li>विजय</li>
+            <li>स्वतंत्र</li>
+            <li>प्रेम</li>
+        </ul>
+        <ul class="links">
+            <li class="anim1 "><a href="./index.html">/home</a></li>
+            <li class="anim1 "><a href="./about.html">/about</a></li>
+            <li class="anim1 disabled"><a href="#">/coursera</a></li>
+            <li class="anim1 "><a href="./livingconvo.html">/living-converstion</a></li>
+            <li class="anim1 tabbed"><a href="./weeklyprogress.html">/weekly-progress</a></li>
+            <li class="anim1 "><a href="./discussion.html">/discussion</a></li>
+            <li class="anim1 "><a href="./mff.html">/mini-film-festival</a></li>
+            <li class="anim1 "><a href="./project.html">/project</a></li>
+            <li class="anim1 "><a href="./contact.html">/contact</a></li>
+        </ul>
+        <div class="closebtn" onclick='toggleOverlay()'>
+            <span>Close</span>
+        </div>
+    </section>
+
+    <!-- Page Load Animations -->
+    <div class="loadanim">
+    	<span class="back"></span>
+    	<span class="front">A</span>
+    </div>
+    <div class="pagechange"></div>
+    <!-- <script src="./libs/vanilla-tilt.min.js"></script> -->
+    <script src="./libs/final.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

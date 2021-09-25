@@ -1,9 +1,3 @@
-// tl = new TimelineMax({});
-
-// tl
-// .staggerFrom('.hidetextintro', 1.5, {opacity:0, ease:Power4.easeOut}, 0.25)
-// .staggerFrom('.hidetextintro', 1.5, {y:100, ease:Power4.easeOut}, 0.25)
-// .then(()=>initTyper());
 
 gsap.from('.hidetextintro',{opacity:0,y:50,duration:0.5,stagger:0.2}).then(()=>initTyper());
 
@@ -63,15 +57,14 @@ var TxtRotate = function(el, toRotate, period) {
             // console.log('re')
             document.querySelector('.abbr-autowrite').title = 'A person formally engaged in learning, especially one enrolled in a school or college.'
         }
-}
+    }
   
     setTimeout(function() {
-      that.tick();
+    that.tick();
     }, delta);
-  };
+};
   
-//   window.onload = function() {
-  function initTyper() {
+function initTyper() {
     var elements = document.getElementsByClassName('txt-rotate');
     for (var i=0; i<elements.length; i++) {
       var toRotate = elements[i].getAttribute('data-rotate');
@@ -87,8 +80,9 @@ var TxtRotate = function(el, toRotate, period) {
     document.body.appendChild(css);
   };
 
-// For MouseJS
 
+
+// For MouseJS
 m = new MJ();
 m.lol();
 document.addEventListener('mousemove',function(event){
@@ -96,22 +90,94 @@ document.addEventListener('mousemove',function(event){
 });
 m.drawClassic();
 
-
-
-//variables
-let overlayVisible = false;
-//My funxciotns
-function toggleOverlay() {
-  gsap.from('.pagechange',{left:'100%',duration:2,ease:Power4.easeOut})
-    if(overlayVisible){
-        // hideit.
-        document.querySelector('.overlaynav').classList.remove('visible')
-        overlayVisible = false
-    }
-    else{
-        //show it.
-        overlayVisible = true;
-        document.querySelector('.overlaynav').classList.add('visible')
-        gsap.from('.anim1',{opacity:0,y:50,duration:0.4,stagger:0.2});
-    }
+try{
+    document.getElementsByClassName('go-back-drop')[0].addEventListener('mouseenter', ()=>{
+    m.dmaj.classList.add('back-invert');
+})
+document.getElementsByClassName('go-back-drop')[0].addEventListener('mouseleave', ()=>{
+    m.dmaj.classList.remove('back-invert');
+})
 }
+catch{
+    
+}
+// Need to setup timelines for gsap animations else the animations are dying, on repeatd clicks.
+
+let tlShowNav = gsap.timeline(), finit = true, overlayVisible = false;
+function toggleOverlay(){
+    if(overlayVisible){
+        //hide it
+        overlayVisible = false
+        tlShowNav.reverse()
+        console.log("Reversed")
+        
+    }   
+    else{
+        overlayVisible = true
+        if(finit){
+            tlShowNav
+            .to('.pagechange', {width:'100%', duration: .4, ease:'expo'})
+            .to('.overlaynav', {top:0, duration: 0})
+            .to('.pagechange', {width:'0', duration: 0.5, ease:'expo'})
+            .from('.anim1',{opacity:0,y:50,duration:0.3,stagger:0.1}, '<')    
+            finit = false
+        }
+        else{
+            tlShowNav.play()
+        }
+        
+        // tlShowNav.reversed(false)
+    } 
+}
+
+
+let loadanim = gsap.timeline({ repeat:-1, yoyo:true })
+    .to('.loadanim .back' , {height:100,width:160, left: 'calc(50% - 80px)',top: 'calc(50% - 50px)', duration: .8, ease:'cric'})
+    .to('.loadanim .back' , {height:160,width:100, left: 'calc(50% - 50px)',top: 'calc(50% - 80px)', duration: .8, ease:'cric'})
+
+
+let intoAmination = gsap.timeline()
+    .from('.hero-head', {opacity:0, y:100, duration:0.5})
+
+window.onload = () => {
+    // gsap.to('.loadanim', {top:'-100%', duration:1, ease: 'sine'})
+    setTimeout(()=>{
+        gsap.to('.loadanim', {top:'-100%', duration:1, ease: 'expo'})
+        setTimeout(()=>{
+        loadanim.kill()      
+    },1000)
+    },1000)
+    // uncomment below on produntion.
+    // gsap.to('.loadanim', {top:'-100%', duration:1, ease: 'sine'})
+    // loadanim.kill()      
+}
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+// let revealTl = gsap.timeline()
+//   .to('.reveal', {
+//     scrollTrigger:{
+//         trigger:'.reveal',
+//         markers:true,
+//     },
+//     width:0,
+//     opacity:0,
+//     duration:.6,
+//     ease:'expo',
+// })
+
+
+// const revealTL = gsap.utils.toArray('.reveal-anim');
+
+// revealTL.forEach((text, i)=>{
+//     console.log(text)
+//     ScrollTrigger.create({
+//         trigger: text,
+//         toggleClass: {targets: text, className:'active'},
+//         start: 'top top',
+//         end:'bottom bottom',
+//         markers: true,
+//     })
+// })

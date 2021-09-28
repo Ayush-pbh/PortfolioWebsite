@@ -175,12 +175,14 @@
             }
         }
         let img=Array(), link = ['one.jpg','two.jpg','three.jpg','four.jpg','five.jpg','six.jpg','seven.jpg','eight.jpg','nine.jpg','ten.jpg','eleven.jpg','twelve.jpg']
+        
         function ImagePreload(){
             link.forEach((g)=>{
                 img.push((new Image()).src = '/home/ayush/Work/Projects/Web Projects/Full Website Pages/MyPortfolioWebsite/images/'+g);
             })
         }
         function init() {
+            ImagePreload();
             initcontainer();
         }
 

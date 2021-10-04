@@ -140,47 +140,41 @@ let intoAmination = gsap.timeline()
     .from('.hero-head', {opacity:0, y:100, duration:0.5})
 
 window.onload = () => {
-    // gsap.to('.loadanim', {top:'-100%', duration:1, ease: 'sine'})
-    // setTimeout(()=>{
-    //     gsap.to('.loadanim', {top:'-100%', duration:1, ease: 'expo'})
-    //     setTimeout(()=>{
-    //     loadanim.kill()      
-    // },1000)
-    // },1000)
-    // uncomment below on produntion.
     gsap.to('.loadanim', {top:'-120%', duration:1, ease: 'sine'})
     loadanim.kill()      
+    b.reveal(2000)
 }
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 
-// let revealTl = gsap.timeline()
-//   .to('.reveal', {
-//     scrollTrigger:{
-//         trigger:'.reveal',
-//         markers:true,
-//     },
-//     width:0,
-//     opacity:0,
-//     duration:.6,
-//     ease:'expo',
-// })
+// // For skew effect on skew classes
+// const content = document.getElementsByClassName("skew-me")[0];
+// let currentPos = content.scrollTop;
 
+// console.log(content)
+// const callDistort = function() {
+//   const newPos = content.scrollTop;
+//   const diff = newPos - currentPos;
+//   const speed = diff * 1.1;
+// //   console.log(speed)
 
-// const revealTL = gsap.utils.toArray('.reveal-anim');
-
-// revealTL.forEach((text, i)=>{
-//     console.log(text)
-//     ScrollTrigger.create({
-//         trigger: text,
-//         toggleClass: {targets: text, className:'active'},
-//         start: 'top top',
-//         end:'bottom bottom',
-//         markers: true,
-//     })
-// })
+//   content.style.transform = "skewY("+speed+"deg)";
+//   currentPos = newPos;
+//   requestAnimationFrame(callDistort)
+// };
+// callDistort();
 
 
 
+
+// Now adding the baffle effefct using baffle js. this effect will be added to the headings.
+
+
+let b = baffle('.baffle-up').start();
+let characters =["█","▓","▒","░","█","▓","▒","░","█","▓","▒","░","<",">","/"];
+b.set({
+    characters: characters,
+    speed: 150
+});

@@ -33,10 +33,48 @@
 		</ul>
 		<div class="hero-content">
             <div class="hero-holder">
+				<div class="hero-subhead">Session 1.1</div>
                 <div class="hero-content-head">
-                    Introduciton
+                    Introduction
                 </div>
+				<div class="hero-text">
+					In Session 1.1 we had to introduce ourselves using a pictorial introduction.
+				</div>
             </div>
+			<div class="hero-holder flexy">
+				<a href="../docs/intro.pdf"><img src="../images/assingment-intro.webp" alt="intro-image" class="hero-image go-back-drop landscape-image "></a>
+				<div class="hero-subhead">View Original <a href="../docs/intro.pdf"  target="_blank"> Here͢	</a>			</div>
+			</div>
+
+			<br>
+			<hr>
+			<br>
+			<div class="hero-holder">
+				<div class="hero-subhead">Session 1.2 </div>
+				<div class="hero-content-head">Assinged Reading</div>
+				<div class="hero-subhead">
+					Key attributes employers want to see on students resumes.
+				</div>
+				<div class="hero-subhead">
+					<a href="https://www.naceweb.org/talent-acquisition/candidate-selection/key-attributes-employers-want-to-see-on-students-resumes/">here</a>
+				</div>
+				<div class="hero-text">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro similique neque ipsa sapiente eaque quod veniam reprehenderit nisi corporis sit, amet inventore voluptates deserunt eos dolorum assumenda ab accusantium a.
+				</div>
+			</div>
+			<br>
+			<hr>
+			<br>
+			<div class="hero-holder image-effect-on " data-img='../images/death-rebirth.webp'>
+				<div class="hero-subhead">Self Reflection</div>
+				<div class="hero-content-head center-text" >
+					<span >Death</span>
+				</div>
+				<div class="hero-text">
+					In the "Gita," Lord Krishna tells Arjuna that the wise person knows that even though every human is destined to die, the soul is immortal: "For death is certain to one who is born...thou shalt not grieve for what is unavoidable." Six quotations from the text are particularly profound sources of consolation for the grieving heart in its saddest moments.
+
+				</div>
+			</div>
 		</div>	
 		
 		<ul class="hero-links">
@@ -46,7 +84,9 @@
 			<hr class="bottom-line">
 		</ul>
 	</div>
-
+	<div class="image-effect-img-wrap">
+		<div class="image-effect-img translucent"></div>
+	</div>
 	<section class='overlaynav '>
         <ul class="hindi-text">
             <li>तपस</li>
@@ -83,6 +123,64 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
 	<script src="../libs/baffle.min.js"></script>
 	<script src="../script.js"></script>
+	<script>
+		const allcontainer = gsap.utils.toArray(".image-effect-on");
+        const venueImageWrap = document.querySelector(".image-effect-img-wrap");
+        const venueImage = document.querySelector(".image-effect-img");
+
+        function initcontainer() {
+            allcontainer.forEach((link) => {
+                link.addEventListener("mouseenter", venueHover);
+                link.addEventListener("mouseleave", venueHover);
+                link.addEventListener("mousemove", moveVenueImage);
+            });
+        }
+
+        function moveVenueImage(e) {
+            let xpos = e.clientX-200;
+            let ypos = e.clientY-231;
+            const tl = gsap.timeline();
+            tl.to(venueImageWrap, {
+                x: xpos,
+                y: ypos,
+            });
+        }
+
+        function venueHover(e) {
+            if (e.type === "mouseenter") {
+                const targetImage = e.target.dataset.img;
+				console.log(targetImage)
+                const tl = gsap.timeline();
+                tl.set(venueImage, {
+                    backgroundImage: `url(${targetImage})`,
+                }).to(venueImageWrap, {
+                    duration: 0.5,
+                    autoAlpha: 1,
+                });
+            } else if (e.type === "mouseleave") {
+                const tl = gsap.timeline();
+                tl.to(venueImageWrap, {
+                    duration: 0.5,
+                    autoAlpha: 0,
+                });
+            }
+        }
+        let img=Array(), link = ['one.webp','two.webp','three.webp','four.webp','five.webp','six.webp','seven.webp','eight.webp','nine.webp','ten.webp','eleven.webp','twelve.webp']
+        
+        function ImagePreload(){
+            link.forEach((g)=>{
+                img.push((new Image()).src = 'http://ayushtripathi.me/PortfolioWebsite/images/'+g);
+            })
+        }
+        function init() {
+            // ImagePreload();
+            initcontainer();
+        }
+
+        window.addEventListener("load", function () {
+            init();
+        });
+	</script>
 
 </body>
 </html>

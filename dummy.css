@@ -697,13 +697,34 @@ img {
   pointer-events: none;
   visibility: hidden;
 }
-
+.image-effect-img-wrap{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+}
 .container-img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: cover;
+}
+.translucent{
+  opacity: .5;
+
+}
+.image-effect-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 462px;
   background-size: cover;
 }
 
@@ -752,8 +773,17 @@ img {
 	background-color: #555;
 }
 
-
-
+.special-text{
+  text-decoration: none;
+}
+.special-text:hover{
+  scale:0;
+}
+.dont-grow:hover{
+  scale:0;
+  flex-grow: 0;
+  font-size: 180px;
+}
 .skew-me{
   will-change: transform;
 

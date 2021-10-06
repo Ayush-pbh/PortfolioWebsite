@@ -85,7 +85,7 @@
 		</ul>
 	</div>
 	<div class="image-effect-img-wrap">
-		<div class="image-effect-img translucent"></div>
+		<div class="image-effect-img t ranslucent"></div>
 	</div>
 	<section class='overlaynav '>
         <ul class="hindi-text">
@@ -165,15 +165,16 @@
                 });
             }
         }
-        let img=Array(), link = ['one.webp','two.webp','three.webp','four.webp','five.webp','six.webp','seven.webp','eight.webp','nine.webp','ten.webp','eleven.webp','twelve.webp']
+        let img=Array(), link = ['death-rebirth.webp']
         
         function ImagePreload(){
             link.forEach((g)=>{
                 img.push((new Image()).src = 'http://ayushtripathi.me/PortfolioWebsite/images/'+g);
+				console.log('H')
             })
         }
         function init() {
-            // ImagePreload();
+            ImagePreload();
             initcontainer();
         }
 

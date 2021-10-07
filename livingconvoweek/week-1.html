@@ -70,7 +70,62 @@
 				<div class="hero-content-head center-text" >
 					<span >Death</span>
 				</div>
-				<div class="hero-text">
+			</div>
+			<div class="hero-holder">
+				<audio controls>
+					<source src="../docs/death-final.mp3" type="audio/m4a">
+					Your browser does not support the audio tag.
+				</audio>
+			</div>
+			<div class="hero-holder">
+				<div class="hero-subhead center-text">Audio Transcript</div>
+				<div class="hero-text grey-text">
+					My perspective on death changed when  a very close family member died during the pandemic and I began to look for answers on death and why do I feel so much pain and sadness
+
+Our general perspective of death is shaped on the belief that whether there is an afterlife, if yes what it's like?
+
+<b>Philosophy of death according to the Egyptians and Christians.</b>
+
+Egyptians believed that after death your heart would be weighed against a feather. To check whether it is fit to enter the underworld. A heart heavy with misdeeds would be eaten by demon.
+
+Christians believe that St. Peter would welcome them on the pearly gates of heaven unless your name doesn't make his list. Well in that case you'll be taken to hell to start your journey with endless eternal pain.
+
+Death May feel like an <b>Ultimate Final Exam</b>, that we fear. But ,many philosophers do believe that death is not to be feared.
+
+<b>Socrates Perspective on death</b>
+
+In <b>399 BC</b> Socrates was sentenced to death. When he faced his eminent death, he remain calm and unafraid for what was about to come. Socrates was a philosopher, and fear was no match for his ability to argue. Socrates didn't think we could know if there's an afterlife or not, but thought there were only two possibilities. Neither of them being anything to be afraid of. He said: <i><b>Either death is a *Dreamless sleep.</b></i>(Nice and not scary)
+
+or it is a <i><b>Passage to another life.</b> (Get to hang out with other people who were already dead.) So in both the possibilities death is nothing to be afraid of. His idea of an afterlife (if it were) was of no physical body but only disembodied minds. That is why he recommended <i><b>Spending your life looking after your mind, cultivating the part that you'll get to keep forever - if there's an afterlife</b></i>.
+
+If you follow his advise, when time comes for you to die, you'll actually se it as a benefit, because you won't be troubled by bodily things, while your mind will be in top form.
+
+Maybe you still find the <i>dreamless sleep</i> scary So let's discuss <b>Epicurus's perspective on death.</b>
+
+<i><b>When we are, death is not come, and, when death is come, we are not.</b> ~ Epicurus</i>
+
+Epicurus rejected the whole idea of an afterlife after we die. he argued that <i>death is the cessation of sensation. Good and evil only make sense in terms of sensation So, <b>death is neither good nor evil.</b></i>
+
+Epicurus believed that things are only good or evil if you are there to experience it. Like pain. not only physical pain the emotional pain too. Someone who has experienced a heart break can tell you it is lot harder to heel than a broken leg. But be it your low grades, you better half cheating on you, you winning the presidential elections, neither of these things is good or bad or less/or more painfull if you are not there to experience it. These feelings and emotions are materialistic and to experience it you need a material body. And by Epicurius's argument death is just your-not-existing anymore. So for the one that dies death is neither good nor bad. He argues that to experience death one needs to exist. But the whole meaning of death is you not existing So... 
+
+***When we are, death is not come, and, when death is come, we are not.***
+
+So Epicurus suggested that, if you are alive and have sensations, try to make them as great as possible, and don't worry about them going to stop. cause if they do stop you will be long gone to experience their absence.
+
+### Fearing death? or is it just a big FOMO.
+
+American Philosopher Thomas Negal, argues that some people fear death because they will miss out the things that they want to experience. 
+
+Like if I/you die right now. like right now you will not be finishing this reading, neither the video game you are in middle of. or the anime you are watching. or to watch the live stream of the first man on mars, you will never be able to confess to the cutie you saw yesterday at the library. which would be saddening, yeah!
+
+But during this we forget that many great things were there before us like we missed (assuming you are below 40), to witness Osho and his teachings. we missed a chance to see buddha. we missed to be born at the same time as of Swami Vivekanand. we missed to see the dinosaurs. 
+
+But we don't feel great loss on the things we have missed in the past.
+
+***If you don't feel a great sense of loss on what you missed before you were even alive, why should you feel loss at what you'll will miss after you die.***
+
+And this is what changed my perspective on death.
+
 					In the "Gita," Lord Krishna tells Arjuna that the wise person knows that even though every human is destined to die, the soul is immortal: "For death is certain to one who is born...thou shalt not grieve for what is unavoidable." Six quotations from the text are particularly profound sources of consolation for the grieving heart in its saddest moments.
 
 				</div>
@@ -137,16 +192,19 @@
         }
 
         function moveVenueImage(e) {
+			
             let xpos = e.clientX-200;
             let ypos = e.clientY-231;
             const tl = gsap.timeline();
-            tl.to(venueImageWrap, {
-                x: xpos,
-                y: ypos,
-            });
+			tl.to(venueImageWrap, {
+				x: xpos,
+				y: ypos,
+			});
+		
         }
 
         function venueHover(e) {
+			// if(window.innerWidth<400){console.log("Hello");return "";}
             if (e.type === "mouseenter") {
                 const targetImage = e.target.dataset.img;
 				console.log(targetImage)

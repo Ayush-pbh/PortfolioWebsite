@@ -788,3 +788,17 @@ img {
   will-change: transform;
 
 }
+.yt-video-embed{
+  width:100%;
+
+}
+
+.grey-text{
+  color:#ccc;
+}
+
+@media only screen and (max-width:600px){
+  .image-effect-img-wrap{
+    display: none;
+  }
+}
